@@ -1,0 +1,20 @@
+h1 {
+    color: #FF644D;
+}
+
+h2 {
+    color: #8927E2;
+}
+
+ol {
+    color: #FF8FFF;
+    list-style-type: upper-roman;
+    text-decoration: underline;
+}
+
+ol li:last-of-type {
+    color: black;
+    text-decoration: underline;
+}
+
+
