@@ -1,0 +1,30 @@
+body p {
+    border-left:  #4285F4 solid 15px;
+    border-right:  #4285F4 solid 15px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 36px;
+    height: 86px;
+    margin: 0;
+    padding-top: 40px;
+    text-align: center;
+    width: 346px;
+}  
+
+body p:first-child {
+    background-color: #E67676;
+    border-top:  #4285F4 solid 15px;
+}
+
+body p:nth-child(2) {
+    background-color: #F2F062;
+}
+
+body p:nth-child(3) {
+    background-color: #A9E6E6;
+}
+
+body p:last-child {
+    background-color: #7692E4;
+    border-bottom:  #4285F4 solid 15px;
+}
