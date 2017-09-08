@@ -1,0 +1,45 @@
+form {
+    background-color: #DCD6CD;
+    box-sizing: border-box;
+    height: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 80px;
+    position: relative;
+    width: 600px;
+}
+
+h1 {
+    background-color: red;
+    color: #857E8D;
+    font-family: sans-serif;
+    padding: 15px;
+}
+
+.personal, 
+.contact,
+.bottom {
+    box-sizing: content-box;
+    padding: 15px;
+}
+
+.personal,
+.contact {
+    background-color: yellow;
+    width: 40%;
+}
+
+.personal {
+    float: left;
+}
+
+.contact {
+    float: right;
+}
+
+.bottom {
+    background-color: green;
+    bottom: 0px;
+    position: absolute;
+    width: 410px;
+}
