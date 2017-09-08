@@ -1,18 +1,18 @@
 form {
     background-color: #DCD6CD;
     box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 0.65em;
     height: 730px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 80px;
+    padding: 20px 60px;
     position: relative;
     width: 600px;
 }
 
 h1 {
-    background-color: red;
     color: #857E8D;
-    font-family: sans-serif;
     padding: 15px;
 }
 
@@ -20,13 +20,13 @@ h1 {
 .contact,
 .bottom {
     box-sizing: content-box;
-    padding: 15px;
+    padding: 2px 15px;
 }
 
 .personal,
 .contact {
-    background-color: yellow;
-    width: 40%;
+    height: 315px;
+    width: 43%;
 }
 
 .personal {
@@ -38,8 +38,15 @@ h1 {
 }
 
 .bottom {
-    background-color: green;
     bottom: 0px;
+    padding-bottom: 20px;
     position: absolute;
-    width: 410px;
+    width: 74.6%;
 }
+
+.personal section:first-of-type,
+section:nth-of-type(2) {
+    display: inline-block;
+    width: 46%;
+}
+
