@@ -17,18 +17,18 @@
                 <h2>
                     Személyes adatok
                 </h2>
-                <p>
+                <p class="required">
                     Név
                 </p>
-                <input type="text" required size="30">
+                <input type="text" required size="26">
             <section>  
                 <p>
                     Születési éved
                 </p>
-                <input type="text" size="8" placeholder="pl. 1984">
+                <input type="text" size="4" placeholder="pl. 1984">
             </section>
             <section>
-                <p>
+                <p class="proba">
                     Nemed
                 </p>
                 <input type="radio">nő
@@ -37,16 +37,18 @@
                 <p>
                     Milyen márkákat szeretsz?
                 </p>
-                <input type="checkbox">Adidas
-                <input type="checkbox">Apple
-                <input type="checkbox">Coca-Cola
-                <input type="checkbox">Mazda
-                <input type="checkbox">Nike
-                <input type="checkbox">Opel
-                <input type="checkbox">Ray-Ban
-                <input type="checkbox">Starbucks
-                <input type="checkbox">Tesla
-                <input type="checkbox">Yahoo
+                <section>
+                    <input type="checkbox">Adidas
+                    <input type="checkbox">Apple
+                    <input type="checkbox">Coca-Cola
+                    <input type="checkbox">Mazda
+                    <input type="checkbox">Nike
+                    <input type="checkbox">Opel
+                    <input type="checkbox">Ray-Ban
+                    <input type="checkbox">Starbucks
+                    <input type="checkbox">Tesla
+                    <input type="checkbox">Yahoo
+                </section>
                 <p>
                     Többet is választhatsz!
                 </p>
@@ -58,28 +60,27 @@
                 <h2>
                     Kapcsolat
                 </h2>
-                <p>
+                <p class="required">
                     Telefonszám
                 </p>
-                <input type="tel" required placeholder="+36 -- --- ----" size="30">
-                <p>
+                <input type="tel" required placeholder="+36 -- --- ----" size="26">
+                <p class="required">
                     E-mail cím
                 </p>
-                <input type="email" required placeholder="nev@domain.hu" size="30">
+                <input type="email" required placeholder="nev@domain.hu" size="26">
                 <p>
                     Facebook profilod
                 </p>
-                <input type="url" placeholder="http://facebook.com/..." size="30">
+                <input type="url" placeholder="http://facebook.com/..." size="26">
                 <p>
                     Twitter profilod
                 </p>
-                <input type="url" placeholder="http://twitter.com/..." size="30">
+                <input type="url" placeholder="http://twitter.com/..." size="26">
                 <p>
                     Milyen házban laksz?
                 </p>
 
                 <!-- legördülő menü placeholder nincs megoldva!!! -->
-                <section>
                     <select name="" id="">
                         <option value="">családi ház</option>
                         <option value="">ikerház</option>
@@ -89,13 +90,12 @@
                         <option value="">vályogház</option>
                         <option value="">kastély</option>
                     </select>
-                </section>
             </div>
 
             <!-- BEMUTATKOZÁSTÓL LEFELÉ -->
             
             <div class="bottom">
-                <p>
+                <p class="required">
                     Bemutatkozás
                 </p>
                 <textarea name="" id="" cols="67" rows="8" placeholder="Írj magadról pár mondatot!"></textarea>
