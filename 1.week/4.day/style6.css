@@ -1,0 +1,25 @@
+table {
+    border-spacing: 10px;
+}
+
+table tr td {
+    border-radius: 50%;
+    background-color: #0CEBDE;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+
+table tr:first-child td:first-child {
+    background-color: #B90CEB;
+}
+
+table tr:last-child td:last-child {
+    background-color: #EBBE0C;
+}
+
+
