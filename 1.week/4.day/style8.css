@@ -1,0 +1,33 @@
+body {
+    width: 580px;
+}
+
+div {
+    border: 1.5px solid #4285F4;
+    margin: 5px;
+    padding: 15px;
+}
+
+p {
+    color: transparent;
+    height: 40px;
+    margin: 0px 5px;
+    width: 40px;
+}
+
+div:first-child p,
+div:last-child p {
+    display: inline-block;
+}
+
+div:first-child p {
+    background-color: #4285F4;
+}
+
+div:last-child p {
+    background-color: #643579;
+}
+
+div:last-child {
+    background-color: #FF6347;
+}
