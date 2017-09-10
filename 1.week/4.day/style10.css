@@ -1,0 +1,27 @@
+p {
+    background-image: url(https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/ui-development/sitebuild-basics/duck.png?raw=true);
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+p:first-child {
+    background-color: #FF6347;
+    background-position: left;
+    background-size: 60px;
+    
+}
+
+p:nth-child(2) {
+    background-color: #643579;
+    background-position: center;
+    background-size: 120px;
+}
+
+p:nth-child(3) {
+    background-color: #808080;
+    background-position: right bottom;
+    background-size: 60px;
+}
