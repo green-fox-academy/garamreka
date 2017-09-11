@@ -6,7 +6,8 @@ namespace _01___HelloMe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Reka");
+            Console.ReadLine();
         }
     }
 }
