@@ -6,9 +6,10 @@ namespace BMI
     {
         static void Main(string[] args)
         {
-            double massInKg = 52;
-            double heightInM = 1.62;
-            Console.WriteLine("My BMI is: " + massInKg / (heightInM * heightInM));
+            double massInKg = 81.2;
+            double heightInM = 1.78;
+            double BMI = massInKg / (heightInM * heightInM);
+            Console.WriteLine("BMI is: " + BMI);
             Console.ReadLine();
         }
     }
