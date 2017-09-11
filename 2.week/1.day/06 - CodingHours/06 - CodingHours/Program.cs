@@ -13,9 +13,10 @@ namespace _06___CodingHours
             double weeklyCodingHours = dailyCodingHours * workDays;
             double weeklyWorkHours = 52;
             double percentage = weeklyCodingHours / weeklyWorkHours;
+            double percentageNice = percentage * 100;
 
-            Console.WriteLine(totalCodingHours);
-            Console.WriteLine(percentage);
+            Console.WriteLine("Total Coding Hours: " + totalCodingHours);
+            Console.WriteLine("Percentage of coding during the week: " + percentageNice + "%");
             Console.ReadLine();
         }
     }
