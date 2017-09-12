@@ -6,13 +6,16 @@ namespace Factorio
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Factorio(5));
+            Console.Write("Give me a number: ");
+            double number = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Factorial is " + Factorio(number));
             Console.ReadLine();
         }
 
-        public static int Factorio (int num)
+        public static double Factorio (double num)
         {
-            int result = 1;
+            double result = 1;
             for (var i = num; i > 0; i--)
             {
                 result *= i;
