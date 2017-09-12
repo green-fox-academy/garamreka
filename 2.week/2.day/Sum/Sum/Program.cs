@@ -6,7 +6,9 @@ namespace Sum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Sum(4));
+            Console.Write("Give me a number: ");
+            int sum = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sum is " + Sum(sum));
             Console.ReadLine();
         }
 
