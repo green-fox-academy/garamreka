@@ -12,7 +12,11 @@ namespace _02___UrlFixer
             // Also, the URL is missing a crutial component, find out what it is and insert it too!
             // Try to solve it more than once using different string functions!
 
-            url = url.Insert(5, ":").Replace("bots", "odds");
+            // First solution:
+            // url = url.Insert(5, ":").Replace("bots", "odds");
+
+            // Second solution:
+            url = url.Substring(0, 5) + ":" + url.Substring(5, 33) + "odds";
 
             Console.WriteLine(url);
             Console.ReadLine();
