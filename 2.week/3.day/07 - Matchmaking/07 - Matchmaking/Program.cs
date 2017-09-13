@@ -15,10 +15,18 @@ namespace _07___Matchmaking
             // Join the two lists by matching one girl with one boy in the order list
             // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
 
-            for (int i = 0; i < girls.Count; i++)
+            for (int i = 0; i < boys.Count; i++)
             {
-                order.Add(girls[i]);
-                order.Add(boys[i]);
+                if (girls.Count > i)
+                {
+                    order.Add(girls[i]);
+                }
+                
+                if (boys.Count > i)
+                {
+                    order.Add(boys[i]);
+                }
+                
             }
 
             foreach (var person in order)
