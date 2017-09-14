@@ -25,7 +25,7 @@ namespace _12___QuoteSwap
             
             Console.ReadLine();
         }
-        public static void Swap(IList list, int indexA, int indexB)
+        public static void Swap(List<string> list, int indexA, int indexB)
         {
             var tmp = list[indexA];
             list[indexA] = list[indexB];
