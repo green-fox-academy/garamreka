@@ -8,11 +8,12 @@ namespace _35___DrawChessTable
         {
             Console.WriteLine("ChessTable");
             Console.WriteLine();
-            for (int i = 1; i <= 8; i++)
+            int n = 8;
+            for (int i = 1; i <= n; i++)
             {
                 if (i%2 == 1)
                 {
-                    for (int j = 1; j <= 4; j++)
+                    for (int j = 1; j <= n/2; j++)
                     {
                         Console.Write("% ");
                     }
@@ -20,7 +21,7 @@ namespace _35___DrawChessTable
                 }
                 else 
                 {
-                    for (int k = 1; k <= 4; k++)
+                    for (int k = 1; k <= n/2; k++)
                     {
                         Console.Write(" %");
                     }
