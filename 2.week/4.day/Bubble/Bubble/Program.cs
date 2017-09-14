@@ -7,7 +7,7 @@ namespace Bubble
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int> { 34, 12, 24, 9, 5 };
+            var list = new List<int> { 34, 12, 24, 9, 5 };
 
             Sort(list, false);
 
