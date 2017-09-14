@@ -20,12 +20,12 @@ namespace _09___Candyshop
             //list[list.FindIndex(ind => ind.Equals(2))] = "Croissant";
             //list[list.FindIndex(ind => ind.Equals(false))] = "Ice Cream";
 
-            list[1] = "Croissant";
-            list[3] = "Ice cream";
+            list[list.IndexOf(2)] = "Croissant".ToString();
+            list[list.IndexOf(false)] = "Ice cream".ToString();
 
-            for (int i = 0; i < list.Count; i++)
+            foreach (var candy in list)
             {
-                Console.WriteLine(list[i]);
+                Console.WriteLine(candy);
             }
 
             Console.ReadLine();
