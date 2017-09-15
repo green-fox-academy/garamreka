@@ -13,44 +13,35 @@ namespace SearchPalindrom
 
             Console.WriteLine("Give me a word or sentence to check: ");
             string userInput = Console.ReadLine();
+            var List = new List<string> { };
 
-            SearchPalindrom(userInput);
+            SearchPalindrom(userInput, List);
 
             Console.ReadLine();
         }
 
-        public static void SearchPalindrom (string input)
+        public static void SearchPalindrom(string input, List<string> output)
         {
-            var output = new List<string> { };
-            char[] inputCharacters = input.ToCharArray();
-            string palindromCharacters = string.Empty;
-            int counter = 1;
+            int counter = 3;
+            int n = 2;
 
-            Array.Reverse(inputCharacters);
-            string reverseInput = new string(inputCharacters);
-            if (input == reverseInput)
+            for (int i = 0; i < input.Length - 2; i++)
             {
-                output.Add(input);
-            }
-
-            for (var i = 1; i < inputCharacters.Length - 1; i++)
-            {
-                if (inputCharacters[i - counter] == inputCharacters[i + counter])
+                for (int j = 0; j < input.Length - n; j++)
                 {
-                    palindromCharacters = inputCharacters[i - counter].ToString() + inputCharacters[i].ToString() + inputCharacters[i + counter].ToString();
-                    output.Add(palindromCharacters);
+                    string subInput = input.Substring(j, counter);
+                    char[] subInputCharacters = subInput.ToCharArray();
+                    Array.Reverse(subInputCharacters);
+                    string reverseSubInput = new string(subInputCharacters);
 
-                    if (inputCharacters[i - 2] == inputCharacters[i + 2])
+                    if (subInput == reverseSubInput)
                     {
-                        palindromCharacters = inputCharacters[i - 2].ToString() + inputCharacters[i - 1].ToString() + inputCharacters[i].ToString() + inputCharacters[i + 1].ToString() + inputCharacters[i + 2].ToString();
-                        output.Add(palindromCharacters);
+                        output.Add(subInput);
                     }
                 }
-                if (inputCharacters[i] == inputCharacters[i + 1] && inputCharacters[i-1] == inputCharacters[i + 2])
-                {
-                    palindromCharacters = inputCharacters[i - 1].ToString() + inputCharacters[i].ToString() + inputCharacters[i + 1].ToString() + inputCharacters[i + 2].ToString();
-                    output.Add(palindromCharacters);
-                }
+                
+                counter++;
+                n++;
             }
 
             foreach (var element in output)
