@@ -18,12 +18,9 @@ namespace CreatePalindrom
         }
         public static void CreatePalindrom (string data)
         {
-            string reverseData = "";
-
-            for (int i = data.Length - 1; i >= 0; i--)
-            {
-                reverseData += data[i];
-            }
+            char[] charactersFromData = data.ToCharArray();
+            Array.Reverse(charactersFromData);
+            string reverseData = new string(charactersFromData);
 
             Console.WriteLine("Output: " + (data + reverseData));
         }
