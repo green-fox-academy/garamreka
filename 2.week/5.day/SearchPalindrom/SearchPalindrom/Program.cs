@@ -25,7 +25,7 @@ namespace SearchPalindrom
             int counter = 3;
             int n = 2;
 
-            for (int i = 0; i < input.Length - 2; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 for (int j = 0; j < input.Length - n; j++)
                 {
