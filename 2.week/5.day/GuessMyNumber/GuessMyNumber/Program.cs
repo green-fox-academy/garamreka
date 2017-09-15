@@ -4,7 +4,6 @@ namespace GuessMyNumber
 {
     class Program
     {
-        static int randomNumber;
         static void Main(string[] args)
         {
             //Write a program where the program chooses a number between 1 and 100.
