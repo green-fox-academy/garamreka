@@ -26,6 +26,7 @@ namespace Unique
                     if (input[i] == output[j])
                     {
                         isDuplicate = true;
+                        break;
                     }
                 }
                 if (isDuplicate == false)
