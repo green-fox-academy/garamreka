@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 CenterBoxFunction", "09 CenterBoxFunction\09 CenterBoxFunction.csproj", "{AADEA746-1E02-4B6B-9C65-AC054B34E1DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AADEA746-1E02-4B6B-9C65-AC054B34E1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADEA746-1E02-4B6B-9C65-AC054B34E1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADEA746-1E02-4B6B-9C65-AC054B34E1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADEA746-1E02-4B6B-9C65-AC054B34E1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25F48147-9850-45E0-8619-D9B5BECC7650}
+	EndGlobalSection
+EndGlobal
