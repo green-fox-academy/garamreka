@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 EnvelopeStar", "17 EnvelopeStar\17 EnvelopeStar.csproj", "{642FDAB0-4FB4-46BC-B414-B1F79B8C528C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{642FDAB0-4FB4-46BC-B414-B1F79B8C528C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642FDAB0-4FB4-46BC-B414-B1F79B8C528C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642FDAB0-4FB4-46BC-B414-B1F79B8C528C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642FDAB0-4FB4-46BC-B414-B1F79B8C528C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32B2D9EA-48D6-4DC2-90BC-8BE47F3BE351}
+	EndGlobalSection
+EndGlobal
