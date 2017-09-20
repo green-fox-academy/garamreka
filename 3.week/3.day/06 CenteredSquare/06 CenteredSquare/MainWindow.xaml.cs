@@ -32,6 +32,8 @@ namespace _06_CenteredSquare
             var topRight = new Point((canvas.Width / 2) + 5, (canvas.Height / 2) - 5);
             var bottomRight = new Point((canvas.Width / 2) + 5, (canvas.Height / 2) + 5);
 
+            foxDraw.StrokeColor(Colors.Green);
+
             foxDraw.DrawLine(topLeft, topRight);
             foxDraw.DrawLine(topRight, bottomRight);
             foxDraw.DrawLine(bottomRight, bottomLeft);
