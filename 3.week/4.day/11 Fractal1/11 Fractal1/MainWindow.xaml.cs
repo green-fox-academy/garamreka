@@ -29,30 +29,24 @@ namespace _11_Fractal1
             int depth = 5;
 
             foxDraw.BackgroundColor(Colors.LightYellow);
-            foxDraw.StrokeColor(Colors.Black);
-            Drawer(foxDraw, line, depth);
+            foxDraw.StrokeColor(Colors.DarkMagenta);
+            Drawer(foxDraw, 0, 0, line, depth);
         }
-        public void Drawer(FoxDraw draw, double canvasWidth, int depth)
+        public void Drawer(FoxDraw draw, double x, double y, double canvasSize, int depth)
         {
             if (depth == 0)
             {
                 return;
             }
+            draw.DrawLine(x + canvasSize / 3, y, x + canvasSize / 3, y + canvasSize);
+            draw.DrawLine(x + canvasSize / 3 * 2, y, x + canvasSize / 3 * 2, y + canvasSize);
+            draw.DrawLine(x, y + canvasSize / 3, x + canvasSize, y + canvasSize / 3);
+            draw.DrawLine(x, y + canvasSize / 3 * 2, x + canvasSize, y + canvasSize / 3 * 2);
 
-            for (double i = 0; i <= canvasWidth; i++)
-            {
-                for (double j = 0; j <= canvasWidth; j++)
-                {
-                    draw.DrawLine(i, 0, i, canvasWidth);
-                    draw.DrawLine(i, 0, i, canvasWidth);
-                    draw.DrawLine(0, j, canvasWidth, j);
-                    draw.DrawLine(0, j, canvasWidth, j);
-                    j += canvasWidth / 3;
-                    
-                }
-                i += canvasWidth / 3;
-                
-            }
+            Drawer(draw, x + canvasSize / 3, y, canvasSize / 3, depth - 1);
+            Drawer(draw, x + canvasSize / 3, y + canvasSize / 3 * 2, canvasSize / 3, depth - 1);
+            Drawer(draw, x, y + canvasSize / 3, canvasSize / 3, depth - 1);
+            Drawer(draw, x + canvasSize / 3 * 2, y + canvasSize / 3, canvasSize / 3, depth - 1);
         }
     }
 }
