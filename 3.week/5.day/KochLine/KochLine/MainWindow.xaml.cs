@@ -26,15 +26,16 @@ namespace KochLine
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
-            double xCoord = 0;
-            double yCoord = 0;
+            double xCoord1 = 0;
+            double yCoord1 = 0;
+            double xCoord2 = 0;
+            double yCoord2 = 0;
             double width = canvas.Width;
-            double heigth = canvas.Width;
 
             foxDraw.BackgroundColor(Colors.LightYellow);
-            KochLineDrawer(foxDraw, xCoord, yCoord, width, Height, 3);
+            KochLineDrawer(foxDraw, xCoord1, yCoord2, xCoord2, yCoord2, width, 3);
         }
-        public void KochLineDrawer (FoxDraw draw, double x, double y, double width, double height, int depth)
+        public void KochLineDrawer (FoxDraw draw, double x1, double y1, double x2, double y2, double size, int depth)
         {
             if (depth == 0)
             {
@@ -43,22 +44,20 @@ namespace KochLine
 
             //main line
             draw.StrokeColor(Colors.DarkMagenta);
-            draw.DrawLine(x, y + height / 2, x + width, y + height / 2);
+            draw.DrawLine(x1, y2 + canvas.Height / 2, x2 + canvas.Width, y2 + canvas.Height / 2);
 
             //transparent middle???
             draw.StrokeColor(Colors.White);
-            draw.DrawLine(x + width / 3, y + height / 2, x + width / 3 * 2, y + height / 2);
+            draw.DrawLine(x1 + canvas.Width / 3, y1 + canvas.Height / 2, x2 + canvas.Width / 3 * 2, y2 + canvas.Height / 2);
 
             //triangle leftline
             draw.StrokeColor(Colors.DarkMagenta);
-            draw.DrawLine(x + width / 3, y + height / 2, x + width / 2, y + height / 5);
+            draw.DrawLine(x1 + canvas.Width / 3, y1 + canvas.Height / 2, x2 + canvas.Width / 2, y2 + canvas.Height / 5);
 
             //triangle rightline
             draw.StrokeColor(Colors.DarkMagenta);
-            draw.DrawLine(x + width / 3 * 2, y + height / 2, x + width / 2, y + height / 5);
+            draw.DrawLine(x1 + canvas.Width / 3 * 2, y1 + canvas.Height / 2, x2 + canvas.Width / 2, y2 + canvas.Height / 5);
 
-            KochLineDrawer(draw, x, y + height / 3, width / 3, height / 3, depth - 1);
-            KochLineDrawer(draw, x + width / 3 * 2, y + height / 3, width / 3, height / 3, depth - 1);
         }
     }
 }
