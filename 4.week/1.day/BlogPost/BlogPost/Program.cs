@@ -23,6 +23,9 @@ namespace BlogPost
             postByWilliamTurton.Title = "One Engineer Is Trying to Get IBM to Reckon With Trump";
             postByWilliamTurton.Text = "Daniel Hanley, a cybersecurity engineer at IBM, doesn’t want to be the center of attention. When I asked to take his picture outside one of IBM’s New York City offices, he told me that he wasn’t really into the whole organizer profile thing.";
             postByWilliamTurton.PublicationDate = "2017.03.28.";
+
+            Console.WriteLine(postByWilliamTurton.Text);
+            Console.ReadLine();
         }
     }
 }
