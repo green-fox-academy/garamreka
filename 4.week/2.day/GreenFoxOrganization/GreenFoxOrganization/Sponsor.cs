@@ -6,8 +6,8 @@ namespace GreenFoxOrganization
 {
     class Sponsor : Person
     {
-        string company;
-        int hiredStudent;
+        private string company;
+        private int hiredStudent;
 
         public Sponsor(string name, int age, string gender, string company)
         {
@@ -26,7 +26,7 @@ namespace GreenFoxOrganization
             hiredStudent = 0;
         }
 
-        public new void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0}, a {1} year old {2} who represents {3} and hired {4} students so far.", name, age, gender, company, hiredStudent);
         }
@@ -34,7 +34,7 @@ namespace GreenFoxOrganization
         {
             hiredStudent++;
         }
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Hire brilliant junior software developers.");
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GreenFoxOrganization
 {
@@ -6,26 +7,41 @@ namespace GreenFoxOrganization
     {
         static void Main(string[] args)
         {
+            List < Person >  people = new List< Person >();
+
             Person mark = new Person("Mark", 46, "male");
-            mark.Introduce();
-            mark.GetGoal();
+            people.Add(mark);
             Person jane = new Person();
-            jane.Introduce();
+            people.Add(jane);
             Student john = new Student("John Doe", 20, "male", "BME");
-            john.Introduce();
-            john.GetGoal();
+            people.Add(john);
             Student student = new Student();
-            student.Introduce();
+            people.Add(student);
             Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
-            gandhi.Introduce();
-            gandhi.GetGoal();
+            people.Add(gandhi);
             Mentor mentor = new Mentor();
-            mentor.Introduce();
+            people.Add(mentor);
             Sponsor sponsor = new Sponsor();
-            sponsor.Introduce();
+            people.Add(sponsor);
             Sponsor elon = new Sponsor("Elon Musk", 46, "male", "SpaceX");
-            elon.Introduce();
-            elon.GetGoal();
+            people.Add(elon);
+
+            student.SkipDays(3);
+
+            for (int i = 0; i < 5; i++)
+            {
+                elon.Hire();
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                sponsor.Hire();
+            }
+
+            foreach (Person person in people)
+            {
+                person.Introduce();
+                person.GetGoal();
+            }
 
             Console.ReadLine();
         }

@@ -26,11 +26,11 @@ namespace GreenFoxOrganization
             skippedDays = 0;
         }
 
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Be a junior software developer.");
         }
-        public new void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0}, a {1} year old {2} from {3} who skipped {4} days from the course already.", name, age, gender, previousOrganization, skippedDays);
         }

@@ -6,7 +6,7 @@ namespace GreenFoxOrganization
 {
     class Mentor : Person
     {
-        string level;
+        private string level;
 
         public Mentor(string name, int age, string gender, string level)
         {
@@ -23,11 +23,11 @@ namespace GreenFoxOrganization
             level = "intermediate";
         }
 
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Educate brilliant junior software developers.");
         }
-        public new void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0}, a {1} year old {2} {3} mentor.", name, age, gender, level);
         }
