@@ -18,7 +18,7 @@ namespace Fibonacci
             {
                 return 400;
             }
-            if (index == 1 || index == null)
+            if (index == 1)
             {
                 return firstElement;
             }
