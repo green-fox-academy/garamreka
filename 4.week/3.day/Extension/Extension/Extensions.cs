@@ -7,20 +7,35 @@ namespace Extension
     {
         public int Add(int a, int b)
         {
-            return 5;
+            return a + b;
         }
 
         public int MaxOfThree(int a, int b, int c)
         {
             if (a > b)
-                return a;
-            else
+            {
+                if (a > c)
+                {
+                    return a;
+                }
                 return c;
+            }    
+            else
+            {
+                if (b > c)
+                {
+                    return b;
+                }
+                return c;
+            }
+
         }
 
         public int Median(List<int> pool)
         {
+            pool.Sort();
             return pool[(pool.Count - 1) / 2];
+
         }
 
         public bool IsVowel(char c)
