@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum", "Sum\Sum.csproj", "{966A41B4-9E8C-445F-B223-EE3E4EA5C959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumTest", "SumTest\SumTest.csproj", "{6461B15C-0675-41B1-BE13-E744DB2D9A4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{966A41B4-9E8C-445F-B223-EE3E4EA5C959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966A41B4-9E8C-445F-B223-EE3E4EA5C959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966A41B4-9E8C-445F-B223-EE3E4EA5C959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966A41B4-9E8C-445F-B223-EE3E4EA5C959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6461B15C-0675-41B1-BE13-E744DB2D9A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6461B15C-0675-41B1-BE13-E744DB2D9A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6461B15C-0675-41B1-BE13-E744DB2D9A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6461B15C-0675-41B1-BE13-E744DB2D9A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AABFEDE4-1D07-401F-977E-FCD0B3BBD15F}
+	EndGlobalSection
+EndGlobal
