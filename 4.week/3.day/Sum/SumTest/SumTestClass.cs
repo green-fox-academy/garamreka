@@ -14,14 +14,6 @@ namespace SumTest
         SumClass sum = new SumClass();
 
         [Test]
-        public void TestSumFunction()
-        {
-            List<int> input = new List<int>() { 1, 2, 3, 4, 5 };
-            int output = 15;
-            Assert.AreEqual(output, sum.SumElementsOfList(input));
-        }
-
-        [Test]
         public void TestSumFunctionWithEmptyString()
         {
             List<int> input = new List<int>();
