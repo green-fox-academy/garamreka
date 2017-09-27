@@ -11,7 +11,6 @@ namespace CountLetters
         public Dictionary<char, int> FromStringToDictionary(string input)
         {
             Dictionary<char, int> output = new Dictionary<char, int>();
-
             char[] fromString = input.ToCharArray();
 
             foreach (var character in fromString)
@@ -25,7 +24,6 @@ namespace CountLetters
                     output[character]++;
                 }
             }
-
             return output;
         }
     }
