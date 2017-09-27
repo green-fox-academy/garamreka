@@ -21,5 +21,20 @@ namespace FibonacciTest
             Assert.AreEqual(output, fibonacciByIndex.ComputeFibonacci(input));
         }
 
+        [Test]
+        public void ComputeFibonacci_WhenIndexTwo_ThenOne()
+        {
+            double input = 2;
+            double output = 1;
+            Assert.AreEqual(output, fibonacciByIndex.ComputeFibonacci(input));
+        }
+
+        [Test]
+        public void ComputeFibonacci_WhenIndexOne_ThenZero()
+        {
+            double input = 1;
+            double output = 0;
+            Assert.AreEqual(output, fibonacciByIndex.ComputeFibonacci(input));
+        }
     }
 }
