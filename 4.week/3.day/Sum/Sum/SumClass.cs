@@ -12,9 +12,12 @@ namespace Sum
         {
             int sumOfElements = 0;
 
-            foreach (var element in intList)
+            if (intList != null)
             {
-                sumOfElements += element;
+                foreach (var element in intList)
+                {
+                    sumOfElements += element;
+                }
             }
 
             return sumOfElements;
