@@ -36,5 +36,13 @@ namespace FibonacciTest
             double output = 0;
             Assert.AreEqual(output, fibonacciByIndex.ComputeFibonacci(input));
         }
+
+        [Test]
+        public void ComputeFibonacci_WhenIndexLessThanOne_ThenBadRequest()
+        {
+            double input = -2;
+            double output = 400;
+            Assert.AreEqual(output, fibonacciByIndex.ComputeFibonacci(input));
+        }
     }
 }
