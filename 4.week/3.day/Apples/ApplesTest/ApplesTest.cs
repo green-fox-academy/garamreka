@@ -20,7 +20,7 @@ namespace ApplesTest
             //arrange
 
             //act
-            string output = "alma";
+            string output = "apple";
 
             //assert
             Assert.AreEqual(output, apple.GetApple());
