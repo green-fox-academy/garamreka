@@ -14,11 +14,6 @@ namespace GardenApplication
         protected double currentWaterLevel = 0;
         protected double needsWaterLevel;
 
-        public Plant (string color)
-        {
-            this.color = color;
-        }
-
         public bool IsThirsty ()
         {
             return needsWaterLevel > currentWaterLevel;

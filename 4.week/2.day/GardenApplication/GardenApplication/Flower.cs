@@ -8,7 +8,7 @@ namespace GardenApplication
 {
     class Flower : Plant
     {
-        public Flower(string color) : base(color)
+        public Flower(string color)
         {
             this.color = color;
             this.absorb = 0.75;
