@@ -39,7 +39,7 @@ namespace Cloneable
 
         public object Clone()
         {
-            return (Student)this.MemberwiseClone();
+            return this.MemberwiseClone();
         }
     }
 }
