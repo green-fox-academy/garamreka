@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TwentyPlusOne
 {
     class Card
     {
-        public string ColorOfCard { get; set; }
-        public string SuitOfCard { get; set; }
-        public string RankOfCard { get; set; }
+        public Color ColorOfCard { get; set; }
+        public Suit SuitOfCard { get; set; }
+        public Rank RankOfCard { get; set; }
 
-        public Card(Suit suit, Rank rank)
+        public Card(Color color, Suit suit, Rank rank)
         {
-            SuitOfCard = suit.ToString();
-            RankOfCard = rank.ToString();
+            ColorOfCard = color;
+            SuitOfCard = suit;
+            RankOfCard = rank;
         }
 
         public enum Color
@@ -34,19 +30,20 @@ namespace TwentyPlusOne
 
         public enum Rank
         {   
-            Two, 
-            Three, 
-            Four, 
-            Five, 
-            Six, 
-            Seven, 
-            Eight, 
-            Nine, 
-            Ten,
-            Jack,
-            Queen,
-            King,
-            Ace
+            Two = 2, 
+            Three = 3, 
+            Four = 4, 
+            Five = 5, 
+            Six = 6, 
+            Seven = 7, 
+            Eight = 8, 
+            Nine = 9, 
+            Ten = 10,
+            Ace = 11,
+            Jack = 12,
+            Queen = 13,
+            King = 14,
+            
         }
     }
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TwentyPlusOne
 {
     class Deck
     {
-        public static List<Card> cards = CreateDeck();
+        public static List<Card> cards = NewDeck();
         public static Random random = new Random();
 
-        public static List<Card> CreateDeck()
+        public static List<Card> NewDeck()
         {
             List<Card> deck = new List<Card>();
 
-            foreach (Card.Rank rank in Enum.GetValues(typeof(Card.Rank)))
+            foreach (Card.Color color in Enum.GetValues(typeof(Card.Color)))
             {
-                foreach (Card.Suit suit in Enum.GetValues(typeof(Card.Suit)))
+                foreach (Card.Rank rank in Enum.GetValues(typeof(Card.Rank)))
                 {
-                    deck.Add(new Card(suit, rank));
+                    foreach (Card.Suit suit in Enum.GetValues(typeof(Card.Suit)))
+                    {
+                        deck.Add(new Card(color, suit, rank));
+                    }
                 }
             }
-
+                
             return deck;
         }
 
@@ -33,30 +33,36 @@ namespace TwentyPlusOne
 
             do
             {
-                var randomCard = cards[random.Next(0, 52)];
+                var randomCard = cards[random.Next(0, cards.Count)];
                 if (!temporaryCards.Contains(randomCard))
                 {
                     temporaryCards.Add(randomCard);
                 }
             }
-            while (!(temporaryCards.Count == 52));
+            while (!(temporaryCards.Count == cards.Count));
 
             cards = temporaryCards;
         }
 
-        public void PullFirst()
+        public static Card PullFirst()
         {
-
+            var firstCard = cards[0];
+            cards.Remove(firstCard);
+            return firstCard;
         }
 
-        public void PullLast()
+        public static Card PullLast()
         {
-
+            var lastCard = cards[cards.Count - 1];
+            cards.Remove(lastCard);
+            return lastCard;
         }
 
-        public void PullRandom()
+        public static Card PullRandom()
         {
-
+            var randomCard = cards[random.Next(0, cards.Count)];
+            cards.Remove(randomCard);
+            return randomCard;
         }
     }
 }
