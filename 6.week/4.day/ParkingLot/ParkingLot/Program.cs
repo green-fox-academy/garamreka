@@ -29,7 +29,7 @@ namespace ParkingLot
 
             for (int i = 0; i < listSize; i++)
             {
-                carList.Add(new Car((Car.CarType)random.Next(0, 4), (Car.CarColor)random.Next(0, 6)));
+                carList.Add(new Car((Car.CarType)random.Next(0, 4), (Car.CarColor)random.Next(0, 7)));
             }
             return carList;
         }
