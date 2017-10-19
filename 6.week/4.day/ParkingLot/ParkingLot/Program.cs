@@ -10,11 +10,13 @@ namespace ParkingLot
     {
         static void Main(string[] args)
         {
-            Print(CountEachType(CreateCarList()));
+            var carList = CreateCarList();
+
+            Print(CountEachType(carList));
             Console.WriteLine();
-            Print(CountEachColor(CreateCarList()));
+            Print(CountEachColor(carList));
             Console.WriteLine();
-            Console.WriteLine(FindMostFrequent(CreateCarList()));
+            Console.WriteLine(FindMostFrequent(carList));
 
             Console.ReadLine();
         }
@@ -34,18 +36,15 @@ namespace ParkingLot
 
         static Dictionary<string, int> CountEachType(List<Car> input)
         {
-            var typeDictionary = (from car in input
-                                  group car by car.TypeOfCar into groups
-                                  select new { key = groups.Key, value = groups.Count() })
-                                  .ToDictionary(g => g.key, g => g.value);
-
-            return typeDictionary;
+            return (from car in input
+                    group car by car.TypeOfCar into groups
+                    select new { key = groups.Key, value = groups.Count() })
+                    .ToDictionary(g => g.key, g => g.value);
         }
 
         static Dictionary<string, int> CountEachColor(List<Car> input)
         {
-            var colorDictionary = input.GroupBy(car => car.ColorOfCar).ToDictionary(key => key.Key, value => value.Count());
-            return colorDictionary;
+            return input.GroupBy(car => car.ColorOfCar).ToDictionary(key => key.Key, value => value.Count());
         }
 
         static void Print(Dictionary<string, int> input)
