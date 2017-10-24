@@ -1,4 +1,5 @@
 ﻿@model MyFirstWebApp.Models.Greeting
+@{ Random random = new Random(); }
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -7,7 +8,12 @@
 </head>
 <body>
     <p>
-        Hello, @Model.Content! This site was loaded @Model.LoadCounter times since last server start.
+        @foreach (var hello in Model.hellos)
+        {
+            <div style = "color: rgb(@(random.Next(0, 255)), @(random.Next(0, 255)), @(random.Next(0, 255))) ">
+            @hello; <br>
+            </div>
+        }
     </p>
 </body>
 </html>
