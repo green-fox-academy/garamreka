@@ -13,6 +13,7 @@ namespace MyFirstWebApp.Controllers
     public class RESTController : Controller
     {
         public static int idCounter = 0;
+
         // GET: /<controller>/
         public IActionResult Index()
         {

@@ -7,6 +7,7 @@ namespace MyFirstWebApp.Models
         public long Id { get; set; }
         public string Content { get; set; }
         public string WebPage = "(It is a web page.)";
+        public int LoadCounter = WebController.LoadCounter;
 
         public Greeting(string name)
         {
