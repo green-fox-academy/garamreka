@@ -6,11 +6,16 @@ namespace MyFirstWebApp.Models
     { 
         public long Id { get; set; }
         public string Content { get; set; }
+        public string WebPage = "(It is a web page.)";
 
         public Greeting(string name)
         {
             Id = RESTController.idCounter;
             Content = $"Hello, {name}";
+        }
+
+        public Greeting()
+        {
         }
     }
 }
