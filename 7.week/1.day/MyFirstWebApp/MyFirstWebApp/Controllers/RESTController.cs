@@ -12,6 +12,7 @@ namespace MyFirstWebApp.Controllers
     [Route("api")]
     public class RESTController : Controller
     {
+        public static int idCounter = 0;
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -21,6 +22,7 @@ namespace MyFirstWebApp.Controllers
         [Route("greeting")]
         public IActionResult Greeting(string name)
         {
+            idCounter++;
             return new JsonResult(new Greeting(name));
         }
     }

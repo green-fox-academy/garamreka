@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MyFirstWebApp.Controllers;
 
 namespace MyFirstWebApp.Models
 {
@@ -12,7 +9,7 @@ namespace MyFirstWebApp.Models
 
         public Greeting(string name)
         {
-            Id = 1;
+            Id = RESTController.idCounter;
             Content = $"Hello, {name}";
         }
     }
