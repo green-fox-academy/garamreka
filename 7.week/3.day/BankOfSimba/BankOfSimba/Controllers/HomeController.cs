@@ -13,7 +13,7 @@ namespace BankOfSimba.Controllers
         [Route("simba")]
         public IActionResult Simba()
         {
-            var bankAccount = new BankAccount("Simba", 2000.00, "lion");
+            var bankAccount = new BankAccount("Simba", 2000.00, "lion", true);
             return View(bankAccount);
         }
 
@@ -22,11 +22,11 @@ namespace BankOfSimba.Controllers
         {
             var bankAccount = new BankAccount();
 
-            bankAccount.clients.Add(new BankAccount("Simba", 2000.00, "lion"));
-            bankAccount.clients.Add(new BankAccount("Timon", 1000.00, "meerkat"));
-            bankAccount.clients.Add(new BankAccount("Pumbaa", 1000.00, "warthog"));
-            bankAccount.clients.Add(new BankAccount("Mafiki", 500.00, "mandrill"));
-            bankAccount.clients.Add(new BankAccount("Zazu", 500.00, " red-billed hornbill"));
+            bankAccount.clients.Add(new BankAccount("Simba", 2000.00, "lion", true));
+            bankAccount.clients.Add(new BankAccount("Timon", 1000.00, "meerkat", false));
+            bankAccount.clients.Add(new BankAccount("Pumbaa", 1000.00, "warthog", false));
+            bankAccount.clients.Add(new BankAccount("Mafiki", 500.00, "mandrill", false));
+            bankAccount.clients.Add(new BankAccount("Zazu", 500.00, " red-billed hornbill", false));
 
             return View(bankAccount);
         }
