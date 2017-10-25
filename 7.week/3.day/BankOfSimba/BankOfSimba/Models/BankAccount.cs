@@ -12,13 +12,15 @@ namespace BankOfSimba.Models
         public string Currency = "Zebra";
         public List<BankAccount> clients = new List<BankAccount>();
         public bool IsKing;
+        public bool IsGood;
 
-        public BankAccount(string name, double balance, string type, bool isKing)
+        public BankAccount(string name, double balance, string type, bool isKing, bool isGood)
         {
             this.Name = name;
             this.Balance = balance;
             this.AnimalType = type;
             this.IsKing = isKing;
+            this.IsGood = isGood;
         }
 
         public BankAccount()
