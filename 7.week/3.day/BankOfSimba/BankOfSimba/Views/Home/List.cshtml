@@ -1,4 +1,5 @@
 ﻿@model BankOfSimba.Models.BankAccount
+@{ var index = 1; }
 
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -9,6 +10,7 @@
 <body>
     <table style = "border: 1px solid black">
         <tr>
+            <th style="border: 1px solid black; padding: 5px">Index</th>
             <th style = "border: 1px solid black; padding: 5px">Name</th>
             <th style = "border: 1px solid black; padding: 5px">Balance</th>
             <th style = "border: 1px solid black; padding: 5px">Type</th>
@@ -16,10 +18,12 @@
         @foreach (var client in Model.clients)
         {
             <tr>
+                <td style="border: 1px solid black; padding: 5px">@index</td>
                 <td style = "border: 1px solid black; padding: 5px">@client.Name</td>
                 <td style = "border: 1px solid black; padding: 5px">@client.Balance</td>
                 <td style = "border: 1px solid black; padding: 5px">@client.AnimalType</td>
             </tr>
+            index++;
         }
     </table>
 </body>
