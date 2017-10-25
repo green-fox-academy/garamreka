@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>
-        Hi, my name is @Model.Name, I'm a @Model.AnimalType and my balace is @Model.Balance.
+        Hi, my name is @Model.Name, I'm a @Model.AnimalType and my balace is @String.Format("{0:00.00}", @Model.Balance) @Model.Currency.
     </p>
 </body>
 </html>
