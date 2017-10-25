@@ -25,19 +25,8 @@
                 <td style="border: 1px solid black; padding: 5px">@client.Balance</td>
                 <td style="border: 1px solid black; padding: 5px">@client.AnimalType</td>
                 <td style="border: 1px solid black; padding: 5px">@((client.IsKing) ? "King" : string.Empty)</td>
-
-                @switch (client.IsGood)
-                {
-                    case true:
-                        <td style="border: 1px solid black; padding: 5px">Good guy</td>
-                        break;
-                    case false:
-                        <td style="border: 1px solid black; padding: 5px">Bad guy</td>
-                        break;
-                }
+                <td style="border: 1px solid black; padding: 5px">@((client.IsGood) ? "Good Guy" : "Bad Guy")</td>
             </tr>
-
-
             index++;
         }
     </table>
