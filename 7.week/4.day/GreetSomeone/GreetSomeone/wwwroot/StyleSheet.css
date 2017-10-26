@@ -1,0 +1,33 @@
+﻿.greetBody {
+    background-image: url(https://media.giphy.com/media/12G7BxUHSMM2TC/source.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: ghostwhite;
+    font-family: 'Dancing Script', cursive;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.greetDiv {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50%;
+}
+
+.greetP {
+    padding: 30px;
+    text-align:center;
+}
+
+.indexBody {
+    background-color: azure;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+}

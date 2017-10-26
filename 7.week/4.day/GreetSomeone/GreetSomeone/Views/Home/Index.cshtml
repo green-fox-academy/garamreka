@@ -1,0 +1,18 @@
+﻿@model GreetSomeone.Models.Greeting
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+</head>
+<body class="indexBody">
+    <p>Enter your name</p>
+    @using (Html.BeginForm("index", "home"))
+    {
+        @Html.TextBoxFor(Model => Model.GreetSomebody)
+        <input type="submit" value="Push me!">
+    }
+</body>
+</html>
