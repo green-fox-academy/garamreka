@@ -9,11 +9,8 @@
     <p>
         @Model.Number
     </p>
-    
-        @using (Html.BeginForm("index", "home"))
-        {
+        <form action="/index" method="post">
             <input type="submit" value="submit">
-        }
-    
+        </form>
 </body>
 </html>
