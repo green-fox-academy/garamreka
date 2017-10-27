@@ -1,0 +1,34 @@
+﻿@model FoxClub.Models.Fox
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FoxClub Information</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <button>@Html.ActionLink("Information", "Index", "Home")</button>
+            <button>@Html.ActionLink("Nutrition Store", "NutritionStore", "Home")</button>
+            <button>@Html.ActionLink("Trick Center", "TrickCenter", "Home")</button>
+        </div>
+        <div class="main">
+            <p>
+                This is @Model.Name. Currently living on @Model.Food and @Model.Drink. He knows @Model.TrickCount tricks.
+            </p>
+            <img src="~/Images/greenfox.png" />
+            <h3>
+                Known Tricks
+            </h3>
+            <ul>
+                @foreach (var trick in Model.Tricks)
+                {
+                    <li>@trick</li>
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

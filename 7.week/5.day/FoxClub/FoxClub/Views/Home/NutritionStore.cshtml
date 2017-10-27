@@ -1,0 +1,27 @@
+﻿@model FoxClub.Models.Fox
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FoxClub Nutrition Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <button>@Html.ActionLink("Information", "Index", "Home")</button>
+            <button>@Html.ActionLink("Nutrition Store", "NutritionStore", "Home")</button>
+            <button>@Html.ActionLink("Trick Center", "TrickCenter", "Home")</button>
+        </div>
+        <div>
+            <p>
+                Food
+            </p>
+            <p>
+                Drink
+            </p>
+        </div>
+    </div>
+</body>
+</html>
