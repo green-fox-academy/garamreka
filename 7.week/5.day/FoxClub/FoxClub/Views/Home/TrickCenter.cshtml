@@ -15,9 +15,16 @@
             <button>@Html.ActionLink("Trick Center", "TrickCenter", "Home")</button>
         </div>
         <div>
-            <p>
+            <form action="/" method="post">
                 Tricks
-            </p>
+                <select name="trick">
+                    <option value="@Model.Trick">write HTML</option>
+                    <option value="@Model.Trick">code in C#</option>
+                    <option value="@Model.Trick">code in JAVA</option>
+                    <option value="@Model.Trick">code in JavaScript</option>
+                </select>
+                <input type="submit" value="Learn">
+            </form>
         </div>
     </div>
 </body>

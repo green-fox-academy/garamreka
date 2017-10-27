@@ -8,17 +8,16 @@ namespace FoxClub.Models
     public class Fox
     {
         public string Name { get; set; }
-        public string Food { get; set; }
-        public string Drink { get; set; }
-        public List<string> Tricks { get; set; } = new List<string>() { "write HTML", "code in C#"};
-        public int TrickCount { get; set; }
+        public Food Food { get; set; }
+        public Drink Drink { get; set; }
+        public Trick Trick { get; set; }
+        public List<Trick> Tricks { get; set; }
+        public int TrickCount;
 
         public Fox()
         {
-            this.Name = "Mr. Fox";
-            this.Food = "pizza";
-            this.Drink = "lemonade";
-            this.TrickCount = Tricks.Count;
+            Tricks = new List<Trick>();
+            TrickCount = Tricks.Count;
         }
     }
 }

@@ -17,24 +17,32 @@ namespace FoxClub.Controllers
         }
 
         [HttpGet]
-        [Route ("")]
+        [Route ("index")]
         public IActionResult Index()
         {
+            var fox = new Fox()
+            {
+                Name = "Mr. Fox",
+                Food = Food.Pizza,
+                Drink = Drink.Lemonade,
+                
+            };
+
             return View(fox);
         }
-
-        //[HttpPost]
-        //[Route("nutritionStore")]
-        //public IActionResult PostNutritionStore()
-        //{
-        //    return RedirectToAction("NutritionStore");
-        //}
 
         [HttpGet]
         [Route("nutritionStore")]
         public IActionResult NutritionStore()
         {
-            return View();
+            return View(fox);
+        }
+
+        [HttpPost]
+        [Route("nutritionStore")]
+        public IActionResult ChangeNutrition()
+        {
+            return RedirectToAction("NutritionStore");
         }
 
         //[HttpPost]

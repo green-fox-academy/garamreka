@@ -15,12 +15,19 @@
             <button>@Html.ActionLink("Trick Center", "TrickCenter", "Home")</button>
         </div>
         <div>
-            <p>
+            <form action="/nutritionStore" method="post">
                 Food
-            </p>
-            <p>
+                <select name="food">
+                    <option value="@Model.Food">Pizza</option>
+                    <option value="@Model.Food">Salad</option>
+                </select>
                 Drink
-            </p>
+                <select name="drink">
+                    <option value="@Model.Drink">Lemonade</option>
+                    <option value="@Model.Drink">Water</option>
+                </select>
+                <input type="submit" value="Change">
+            </form>
         </div>
     </div>
 </body>
