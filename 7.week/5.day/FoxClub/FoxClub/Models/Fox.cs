@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace FoxClub.Models
         public Trick Trick { get; set; }
         public List<Trick> Tricks { get; set; }
         public int TrickCount;
+        public string[] Foods => Enum.GetNames(typeof(Food));
+        public string[] Drinks => Enum.GetNames(typeof(Drink));
 
         public Fox()
         {

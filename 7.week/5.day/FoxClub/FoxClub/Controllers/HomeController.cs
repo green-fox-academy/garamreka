@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FoxClub.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace FoxClub.Controllers
 {
@@ -17,15 +18,14 @@ namespace FoxClub.Controllers
         }
 
         [HttpGet]
-        [Route ("index")]
-        public IActionResult Index()
+        [Route ("information")]
+        public IActionResult Information()
         {
             var fox = new Fox()
             {
                 Name = "Mr. Fox",
                 Food = Food.Pizza,
-                Drink = Drink.Lemonade,
-                
+                Drink = Drink.Lemonade
             };
 
             return View(fox);
@@ -42,21 +42,23 @@ namespace FoxClub.Controllers
         [Route("nutritionStore")]
         public IActionResult ChangeNutrition()
         {
-            return RedirectToAction("NutritionStore");
+            //fox.Food = 
+            //fox.Drink = 
+            return RedirectToAction("Information");
         }
 
         //[HttpPost]
         //[Route("trickCenter")]
-        //public IActionResult PostTrickCenter()
+        //public IActionResult LearnNewTrick()
         //{
-        //    return RedirectToAction("TrickCenter");
+        //    return RedirectToAction("Information");
         //}
 
         [HttpGet]
         [Route("trickCenter")]
         public IActionResult TrickCenter()
         {
-            return View();
+            return View(fox);
         }
     }
 }
