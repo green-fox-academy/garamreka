@@ -1,4 +1,4 @@
-﻿@model ToDoApp.Models.Todo
+﻿@model List<ToDoApp.Models.Todo>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,12 +14,16 @@
             <th>DONE</th>
             <th>URGENT</th>
         </tr>
-        <tr>
-            <td>@Model.Id</td>
-            <td>@Model.Title</td>
-            <td>@Model.IsDone</td>
-            <td>@Model.IsUrgent</td>
-        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.IsDone</td>
+                <td>@item.IsUrgent</td>
+            </tr>
+        }
     </table>
 </body>
 </html>

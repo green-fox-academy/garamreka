@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using ToDoApp.Entities;
 using ToDoApp.Models;
 
@@ -13,9 +14,9 @@ namespace ToDoApp.Repositories
             TodoContext = todoContext;
         }
 
-        public Todo GetLastTodo()
+        public List<Todo> GetTodo()
         {
-            return TodoContext.Todos.Last();
+            return TodoContext.Todos.ToList();
         }
     }
 }

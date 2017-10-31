@@ -17,7 +17,7 @@ namespace ToDoApp.Controllers
         [Route("list")]
         public IActionResult List()
         {
-            return View(TodoRepository.GetLastTodo());
+            return View(TodoRepository.GetTodo());
         }
     }
 }
