@@ -1,4 +1,6 @@
-﻿using ToDoApp.Entities;
+﻿using System.Linq;
+using ToDoApp.Entities;
+using ToDoApp.Models;
 
 namespace ToDoApp.Repositories
 {
@@ -9,6 +11,11 @@ namespace ToDoApp.Repositories
         public TodoRepository(TodoContext todoContext)
         {
             TodoContext = todoContext;
+        }
+
+        public Todo GetLastTodo()
+        {
+            return TodoContext.Todos.Last();
         }
     }
 }
