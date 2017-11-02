@@ -13,7 +13,7 @@ namespace ToDoApp.Migrations
                 name: "Todos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     IsDone = table.Column<bool>(nullable: false),
                     IsUrgent = table.Column<bool>(nullable: false),

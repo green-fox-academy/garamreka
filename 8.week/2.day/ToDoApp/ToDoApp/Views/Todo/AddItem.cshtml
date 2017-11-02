@@ -1,0 +1,16 @@
+﻿@model ToDoApp.Models.Todo
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ToDoApp</title>
+    <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
+</head>
+<body>
+    <h1>Add new Todo</h1>
+    @using (Html.BeginForm("AddItem", "Todo"))
+    {
+        @Html.TextBoxFor(model => model.Title)
+        <input type = "submit" value="Add">
+    }
+</body>
+</html>

@@ -7,12 +7,14 @@
 </head>
 <body>
     <h1>TODOS FOR TODAY:</h1>
+    <button>@Html.ActionLink("Add new todo", "Add", "Todo")</button>
     <table>
         <tr>
             <th>ID</th>
             <th>ACTION</th>
             <th>DONE</th>
             <th>URGENT</th>
+            <th>DELETE</th>
         </tr>
 
         @foreach (var item in Model)
@@ -22,6 +24,12 @@
                 <td>@item.Title</td>
                 <td>@item.IsDone</td>
                 <td>@item.IsUrgent</td>
+                <td>
+                    <form action="/{id}/delete" method="post">
+                        <input type="hidden" name="id" value="@item.Id"/>
+                        <button type="submit">x</button>
+                    </form>
+                </td>
             </tr>
         }
     </table>

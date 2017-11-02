@@ -8,7 +8,7 @@ using ToDoApp.Entities;
 namespace ToDoApp.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20171031140547_InitialMigration")]
+    [Migration("20171102133504_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace ToDoApp.Migrations
 
             modelBuilder.Entity("ToDoApp.Models.Todo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<bool>("IsDone");

@@ -18,7 +18,7 @@ namespace ToDoApp.Migrations
 
             modelBuilder.Entity("ToDoApp.Models.Todo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<bool>("IsDone");
