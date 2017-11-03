@@ -4,14 +4,16 @@
 <head>
     <title>ToDoApp</title>
     <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
     <h1>TODOS FOR TODAY:</h1>
-    <button>@Html.ActionLink("Add new todo", "Add", "Todo")</button>
+    <button class="add">@Html.ActionLink("Add new todo", "Add", "Todo")</button>
     <table>
         <tr>
             <th>ID</th>
-            <th>ACTION</th>
+            <th style="min-width: 60px;">ACTION</th>
             <th>DONE</th>
             <th>URGENT</th>
             <th>EDIT</th>
@@ -22,23 +24,24 @@
         {
             <tr>
                 <td>@item.Id</td>
-                <td>@item.Title</td>
+                <td style="min-width: 60px;">@item.Title</td>
                 <td>@item.IsDone</td>
                 <td>@item.IsUrgent</td>
                 <td>
-                    <form action="/todo/@item.Id/edit" method="get">
-                        <input type="hidden" name="Id" value="@item.Id" />
+                    <form style="border:none" action="/todo/@item.Id/edit" method="get">
+                        <input  type="hidden" name="Id" value="@item.Id" />
                         <button type="submit">Edit</button>
                     </form>
                 </td>
                 <td>
-                    <form action="/{id}/delete" method="post">
-                        <input type="hidden" name="Id" value="@item.Id"/>
-                        <button type="submit">x</button>
+                    <form style="border:none" action="/{id}/delete" method="post">
+                        <input  type="hidden" name="Id" value="@item.Id"/>
+                        <button type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
         }
     </table>
+    </div>
 </body>
 </html>
