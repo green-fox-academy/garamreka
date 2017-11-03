@@ -45,18 +45,20 @@ namespace ToDoApp.Controllers
             return RedirectToAction("List");
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("/todo/{id}/edit")]
-        public IActionResult Edit(int id)
+        public IActionResult Edit([FromQuery] string Id)
         {
+            int id = int.Parse(Id);
             var todo = TodoRepository.GetID(id);
             return View(todo);
         }
 
         [HttpPost]
-        [Route("/{id}/update")]
+        [Route("/{id}/edit")]
         public IActionResult Update(Todo todo)
         {
+            
             TodoRepository.UpdateTodo(todo);
             return RedirectToAction("List");
         }

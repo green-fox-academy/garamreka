@@ -6,10 +6,10 @@
     <link href=@Url.Content("~/StyleSheet.css") rel="stylesheet" />
 </head>
 <body>
-    <h1>Edit Todo</h1>
+    <h1>Edit Todo</h1> 
         @using (Html.BeginForm("Update", "Todo"))
         {
-        <input type="hidden" name="Id" value="@Model.Id"/>
+        <input type = "hidden" name = "Id" value="@Model.Id"/>
         <p>Todo Description @Html.TextBoxFor(model => model.Title) </p>
         <p>Urgent @Html.CheckBoxFor(model => model.IsUrgent) </p>
         <p>Done @Html.CheckBoxFor(model => model.IsDone) </p>

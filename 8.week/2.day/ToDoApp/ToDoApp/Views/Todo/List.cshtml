@@ -26,14 +26,14 @@
                 <td>@item.IsDone</td>
                 <td>@item.IsUrgent</td>
                 <td>
-                    <form action="/todo/(@item.Id)/edit" method="post">
+                    <form action="/todo/@item.Id/edit" method="get">
                         <input type="hidden" name="Id" value="@item.Id" />
                         <button type="submit">Edit</button>
                     </form>
                 </td>
                 <td>
                     <form action="/{id}/delete" method="post">
-                        <input type="hidden" name="id" value="@item.Id"/>
+                        <input type="hidden" name="Id" value="@item.Id"/>
                         <button type="submit">x</button>
                     </form>
                 </td>
