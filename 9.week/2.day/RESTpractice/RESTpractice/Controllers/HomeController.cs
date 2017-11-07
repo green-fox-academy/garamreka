@@ -66,29 +66,25 @@ namespace RESTpractice.Controllers
         [HttpPost]
         [Route("/dountil/{what}")]
         [Route("/dountil")]
-        public IActionResult Dountil(string what, [FromBody] DoUntil until)
+        public IActionResult Dountil(string what, [FromBody] Properties until)
         {
             int resultNumber = 0;
-
             if (until == null)
             {
                 return Json(new { error = "Please provide a number!" });
             }
-
             if (string.IsNullOrEmpty(what))
             {
                 return NotFound();
             }
-
-            if (what == "sum")
+            else if (what == "sum")
             {
                 for (int i = 0; i <= until.Until; i++)
                 {
                     resultNumber += i;
                 }
             }
-
-            if (what == "factor")
+            else if (what == "factor")
             {
                 resultNumber = 1;
                 for (int i = 1; i <= until.Until; i++)
@@ -96,8 +92,48 @@ namespace RESTpractice.Controllers
                     resultNumber *= i;
                 }
             }
-
             return Json(new { result = $"{resultNumber}" });
+        }
+
+        [HttpPost]
+        [Route("/arrays")]
+        public IActionResult ArrayHandler([FromBody] Properties properties)
+        {
+            if (string.IsNullOrEmpty(properties.What))
+            {
+                return NotFound();
+            }
+            else if (properties.What == "double")
+            {
+                int[] resultArray = new int[properties.Numbers.Length];
+                for (int i = 0; i < properties.Numbers.Length; i++)
+                {
+                    resultArray[i] = properties.Numbers[i] * 2;
+                }
+                return Json(new { result = resultArray });
+            }
+            else if (properties.What == "sum")
+            {
+                int resultNumber = 0;
+                for (int i = 0; i < properties.Numbers.Length; i++)
+                {
+                    resultNumber += properties.Numbers[i];
+                }
+                return Json(new { result = $"{resultNumber}" });
+            }
+            else if (properties.What == "multiply")
+            {
+                int resultNumber = 1;
+                for (int i = 0; i < properties.Numbers.Length; i++)
+                {
+                    resultNumber *= properties.Numbers[i];
+                }
+                return Json(new { result = $"{resultNumber}" });
+            }
+            else
+            {
+                return Json(new { error = "Please provide what to do with the numbers!" });
+            }
         }
     }
 }

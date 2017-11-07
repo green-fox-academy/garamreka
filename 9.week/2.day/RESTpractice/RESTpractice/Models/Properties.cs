@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace RESTpractice.Models
 {
-    public class DoUntil
+    public class Properties
     {
         public int? Until { get; set; }
+        public string What { get; set; }
+        public int[] Numbers { get; set; }
     }
 }
