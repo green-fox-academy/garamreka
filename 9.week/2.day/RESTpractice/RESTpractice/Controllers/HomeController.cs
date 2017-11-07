@@ -43,7 +43,22 @@ namespace RESTpractice.Controllers
             }
             else
             {
-                return Json(new { welcome_message = "Oh, hi there " + name + ", my dear " + title + "!" });
+                return Json(new { welcome_message = $"Oh, hi there {name}, my dear {title}!" });
+            }
+        }
+
+        [HttpGet]
+        [Route("/appenda/{appendable}")]
+        [Route("/appenda")]
+        public IActionResult Appenda(string appendable)
+        {
+            if (string.IsNullOrEmpty(appendable))
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Json(new { appended = $"{appendable}a" });
             }
         }
     }
