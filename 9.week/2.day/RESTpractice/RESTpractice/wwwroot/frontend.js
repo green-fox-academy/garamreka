@@ -1,4 +1,4 @@
-﻿window.baseUrl = "http://localhost:12345/api";
+﻿window.baseUrl = "http://localhost:11827";
 $("#server_change").on("submit", function (e) {
     e.preventDefault();
     window.baseUrl = $("#server_address").val();
