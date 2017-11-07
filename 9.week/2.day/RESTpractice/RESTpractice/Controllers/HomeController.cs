@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RESTpractice.Models;
 
 namespace RESTpractice.Controllers
 {
@@ -60,6 +61,43 @@ namespace RESTpractice.Controllers
             {
                 return Json(new { appended = $"{appendable}a" });
             }
+        }
+
+        [HttpPost]
+        [Route("/dountil/{what}")]
+        [Route("/dountil")]
+        public IActionResult Dountil(string what, [FromBody] DoUntil until)
+        {
+            int resultNumber = 0;
+
+            if (until == null)
+            {
+                return Json(new { error = "Please provide a number!" });
+            }
+
+            if (string.IsNullOrEmpty(what))
+            {
+                return NotFound();
+            }
+
+            if (what == "sum")
+            {
+                for (int i = 0; i <= until.Until; i++)
+                {
+                    resultNumber += i;
+                }
+            }
+
+            if (what == "factor")
+            {
+                resultNumber = 1;
+                for (int i = 1; i <= until.Until; i++)
+                {
+                    resultNumber *= i;
+                }
+            }
+
+            return Json(new { result = $"{resultNumber}" });
         }
     }
 }
