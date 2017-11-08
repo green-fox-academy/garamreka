@@ -69,13 +69,14 @@ namespace RESTpractice.Controllers
         public IActionResult Dountil(string what, [FromBody] Properties until)
         {
             int resultNumber = 0;
-            if (until == null)
-            {
-                return Json(new { error = "Please provide a number!" });
-            }
+
             if (string.IsNullOrEmpty(what))
             {
                 return NotFound();
+            }
+            if (until == null)
+            {
+                return Json(new { error = "Please provide a number!" });
             }
             else if (what == "sum")
             {

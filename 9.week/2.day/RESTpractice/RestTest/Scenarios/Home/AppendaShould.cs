@@ -24,7 +24,6 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/appenda/cic");
-            string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -35,18 +34,17 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/appenda/cic");
-            string responseJson = await response.Content.ReadAsStringAsync();
+            string responseString = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"appended\":\"cica\"}", responseJson);
+            Assert.Equal("{\"appended\":\"cica\"}", responseString);
         }
 
         [Fact]
-        public async Task ReturnAppendaErrorNotFound()
+        public async Task ReturnErrorNotFound()
         {
             //act
             var response = await Context.Client.GetAsync("/appenda");
-            string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);

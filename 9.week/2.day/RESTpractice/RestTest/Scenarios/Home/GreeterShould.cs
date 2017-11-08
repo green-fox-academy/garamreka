@@ -24,7 +24,6 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/greeter?name=Petike&title=student");
-            string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -35,10 +34,10 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/greeter?name=Petike&title=student");
-            string responseJson = await response.Content.ReadAsStringAsync();
+            string responseString = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"welcome_message\":\"Oh, hi there Petike, my dear student!\"}", responseJson);
+            Assert.Equal("{\"welcome_message\":\"Oh, hi there Petike, my dear student!\"}", responseString);
         }
 
         [Fact]
@@ -46,10 +45,10 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/greeter?name=Petike");
-            string responseJson = await response.Content.ReadAsStringAsync();
+            string responseString = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"error\":\"Please provide a title!\"}", responseJson);
+            Assert.Equal("{\"error\":\"Please provide a title!\"}", responseString);
         }
 
         [Fact]
@@ -57,10 +56,10 @@ namespace Rest.IntegrationTests.Scenarios.Home
         {
             //act
             var response = await Context.Client.GetAsync("/greeter?title=student");
-            string responseJson = await response.Content.ReadAsStringAsync();
+            string responseString = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"error\":\"Please provide a name!\"}", responseJson);
+            Assert.Equal("{\"error\":\"Please provide a name!\"}", responseString);
         }
     }
 }
