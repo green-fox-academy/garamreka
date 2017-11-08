@@ -65,5 +65,45 @@ namespace Rest.IntegrationTests.Scenarios.Home
             //assert
             Assert.Equal("{\"error\":\"Please provide a number!\"}", responseString);
         }
+
+        [Fact]
+        public async Task ReturnResult15WhenSum5()
+        {
+            //act
+            var usedUntil = new Properties
+            {
+                Until = 5,
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(usedUntil).ToString(),
+                encoding: Encoding.UTF8,
+                mediaType: "application/json");
+            var response = await Context.Client.PostAsync("/dountil/sum", content);
+            string responseString = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"result\":\"15\"}", responseString);
+        }
+
+        [Fact]
+        public async Task ReturnResult120WhenFactor5()
+        {
+            //act
+            var usedUntil = new Properties
+            {
+                Until = 5,
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(usedUntil).ToString(),
+                encoding: Encoding.UTF8,
+                mediaType: "application/json");
+            var response = await Context.Client.PostAsync("/dountil/factor", content);
+            string responseString = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"result\":\"120\"}", responseString);
+        }
     }
 }
