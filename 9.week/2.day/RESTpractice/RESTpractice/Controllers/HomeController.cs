@@ -100,9 +100,9 @@ namespace RESTpractice.Controllers
         [Route("/arrays")]
         public IActionResult ArrayHandler([FromBody] Properties properties)
         {
-            if (string.IsNullOrEmpty(properties.What))
+            if (string.IsNullOrEmpty(properties.What) || properties.Numbers == null)
             {
-                return NotFound();
+                return Json(new { error = "Please provide what to do with the numbers!" });
             }
             else if (properties.What == "double")
             {
