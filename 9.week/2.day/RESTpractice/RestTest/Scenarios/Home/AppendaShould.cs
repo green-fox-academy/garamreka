@@ -1,17 +1,19 @@
-using RestTest.TestFixtures;
+﻿using RestTest.TestFixtures;
 using System;
+using System.Collections.Generic;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Rest.IntegrationTests.Scenarios.Home
 {
     [Collection("BaseCollection")]
-    public class DoublingShould
+    public class AppendaShould
     {
         private TestContext Context;
 
-        public DoublingShould(TestContext context)
+        public AppendaShould(TestContext context)
         {
             //arrange
             Context = context;
@@ -21,7 +23,7 @@ namespace Rest.IntegrationTests.Scenarios.Home
         public async Task ReturnOkStatus()
         {
             //act
-            var response = await Context.Client.GetAsync("/doubling?input=5");
+            var response = await Context.Client.GetAsync("/appenda/cic");
             string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
@@ -29,25 +31,25 @@ namespace Rest.IntegrationTests.Scenarios.Home
         }
 
         [Fact]
-        public async Task ReturnErrorMessage()
+        public async Task ReturnAppendaCic()
         {
             //act
-            var response = await Context.Client.GetAsync("/doubling");
+            var response = await Context.Client.GetAsync("/appenda/cic");
             string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"error\":\"Please provide an input!\"}" , responseJson);
+            Assert.Equal("{\"appended\":\"cica\"}", responseJson);
         }
 
         [Fact]
-        public async Task ReturnDoubling()
+        public async Task ReturnAppendaErrorNotFound()
         {
             //act
-            var response = await Context.Client.GetAsync("/doubling?input=5");
+            var response = await Context.Client.GetAsync("/appenda");
             string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal("{\"received\":5,\"result\":10}", responseJson);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }
