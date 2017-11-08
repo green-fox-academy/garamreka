@@ -135,5 +135,12 @@ namespace RESTpractice.Controllers
                 return Json(new { error = "Please provide what to do with the numbers!" });
             }
         }
+
+        [HttpGet]
+        [Route("/log")]
+        public IActionResult Log()
+        {
+           return Json(new {  });
+        }
     }
 }
