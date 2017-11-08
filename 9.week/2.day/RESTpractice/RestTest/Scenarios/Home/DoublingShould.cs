@@ -21,7 +21,7 @@ namespace RestTest
         public async Task ReturnOkStatus()
         {
             //act
-            var response = await Context.Client.GetAsync("/rest/doubling?input=5");
+            var response = await Context.Client.GetAsync("/doubling?input=5");
             string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
@@ -29,14 +29,25 @@ namespace RestTest
         }
 
         [Fact]
-        public async Task Return()
+        public async Task ReturnErrorMessage()
         {
             //act
-            var response = await Context.Client.GetAsync("/rest/doubling?input=5");
+            var response = await Context.Client.GetAsync("/doubling");
             string responseJson = await response.Content.ReadAsStringAsync();
 
             //assert
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal("{\"error\":\"Please provide an input!\"}" , responseJson);
+        }
+
+        [Fact]
+        public async Task ReturnDoubling()
+        {
+            //act
+            var response = await Context.Client.GetAsync("/doubling?input=5");
+            string responseJson = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"received\":5,\"result\":10}", responseJson);
         }
     }
 }
