@@ -8,7 +8,7 @@ using ToDoApp.Entities;
 namespace ToDoApp.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20171102133504_InitialMigration")]
+    [Migration("20171109103851_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
