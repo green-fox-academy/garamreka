@@ -26,7 +26,7 @@ namespace ToDoApp
             Configuration = builder.Build();
 
             services.AddMvc();
-            services.AddDbContext<TodoContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TodoConnection"]));
+            services.AddDbContext<TodoContext>(options => options.UseNpgsql(Configuration["ConnectionStrings:TodoConnection"]));
             services.AddScoped<TodoRepository>();
         }
 
