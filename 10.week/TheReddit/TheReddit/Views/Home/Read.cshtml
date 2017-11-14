@@ -1,0 +1,56 @@
+﻿@model List<TheReddit.Models.RedditPost>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reddit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="jumbotron container">
+        <h1>Reddit</h1>
+        <button class="btn btn-default" type="submit">@Html.ActionLink("Add new post", "Add", "Home")</button>
+        <p></p>
+        <table class="table table-bordered">
+            <tr>
+                <th class="text-center">CREATED</th>
+                <th class="text-center">TITLE</th>
+                <th class="text-center">SCORE</th>
+                <th class="text-center">UPVOTES</th>
+                <th class="text-center">DOWNVOTES</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var post in Model)
+            {
+                <tr>
+                    <td>@post.Date.Day.@post.Date.Month.@post.Date.Year.</td>
+                    <td>@post.Title</td>
+                    <td>
+                        @{var total = @post.UpVote - @post.DownVote;}
+                        @total
+                    </td>
+                    <td>@post.UpVote</td>
+                    <td>@post.DownVote</td>
+                    <td class="text-center">
+                        <form action="/@post.Id/upvote" method="get">
+                            <input type="hidden" name="Id" value="@post.Id" />
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="text-center">
+                        <form action="/@post.Id/downvote" method="get">
+                            <input type="hidden" name="Id" value="@post.Id" />
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+             }
+        </table>
+    </div>
+</body>
+</html>
