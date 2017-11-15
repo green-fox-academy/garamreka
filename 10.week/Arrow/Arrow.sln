@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrow", "Arrow\Arrow.csproj", "{F80CADD6-5B3F-467D-B5A2-64802AB39933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrow.IntegrationTest", "Arrow.IntegrationTest\Arrow.IntegrationTest.csproj", "{82D70CF1-3E3E-474C-8CCD-6AF6FCEAC2F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F80CADD6-5B3F-467D-B5A2-64802AB39933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80CADD6-5B3F-467D-B5A2-64802AB39933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80CADD6-5B3F-467D-B5A2-64802AB39933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80CADD6-5B3F-467D-B5A2-64802AB39933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82D70CF1-3E3E-474C-8CCD-6AF6FCEAC2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82D70CF1-3E3E-474C-8CCD-6AF6FCEAC2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82D70CF1-3E3E-474C-8CCD-6AF6FCEAC2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82D70CF1-3E3E-474C-8CCD-6AF6FCEAC2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEDABE82-01AA-4E5A-9478-4DB5D579A4E8}
+	EndGlobalSection
+EndGlobal
