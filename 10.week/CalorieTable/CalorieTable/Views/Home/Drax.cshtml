@@ -1,0 +1,40 @@
+﻿@model List<CalorieTable.Models.Food>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <button type="submit">@Html.ActionLink("Add new food", "Add", "Home")</button>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>Calorie</td>
+            <td>Name</td>
+            <td>Change</td>
+        </tr>
+        
+            @foreach (var food in Model)
+            {
+                <tr>
+                    <td>@food.Amount</td>
+                    <td>@food.Calorie</td>
+                    <td>@food.Name</td>
+                    <td>
+                        <form action="/@(food.Id)/edit" method="get">
+                            <input type="hidden" name="Id" value="@food.Id"/>
+                            <button type="submit">Change Amount</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/{id}/delete" method="post">
+                            <input type="hidden" name="Id" value="@food.Id" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+    </table>
+    
+</body>
+</html>

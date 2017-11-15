@@ -1,0 +1,26 @@
+﻿@model CalorieTable.Models.Food
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Add new Todo</h1>
+        @using (Html.BeginForm("Add", "Home"))
+        {
+            <p>
+                Name 
+                @Html.TextBoxFor(model => model.Name)
+            </p>
+            <p>
+                Amount
+                @Html.TextBoxFor(model => model.Amount)
+            </p>
+            <p>
+                Calorie
+                @Html.TextBoxFor(model => model.Calorie)
+            </p>
+            <input class="button" type="submit" value="Add">
+        }
+</body>
+</html>

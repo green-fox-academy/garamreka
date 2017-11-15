@@ -1,0 +1,19 @@
+﻿@model CalorieTable.Models.Food
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Edit Todo</h1>
+        @using (Html.BeginForm("ChangeAmount", "Home"))
+        {
+            <p>@Model.Name</p>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" name="Name" value="@Model.Name" />
+            <input type="hidden" name="Calorie" value="@Model.Calorie" />
+            <p>Amount @Html.TextBoxFor(model => model.Amount) </p>
+            <button type="submit">Edit</button>
+        }
+</body>
+</html>
