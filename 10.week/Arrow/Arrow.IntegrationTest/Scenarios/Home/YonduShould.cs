@@ -30,7 +30,7 @@ namespace Arrow.IntegrationTest
             var response = await Context.Client.GetAsync("/yondu?distance=98.9&time=8");
             string responseJson = await response.Content.ReadAsStringAsync();
 
-            Assert.Equal("{\"time\":8.0,\"distance\":98.9,\"speed\":791.2}", responseJson);
+            Assert.Equal("{\"time\":8.0,\"distance\":98.9,\"speed\":12.3625}", responseJson);
         }
 
         [Fact]
