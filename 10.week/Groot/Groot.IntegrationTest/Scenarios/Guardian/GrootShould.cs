@@ -48,7 +48,7 @@ namespace Groot.IntegrationTest.Scenarios.Guardian
         [Fact]
         public async Task ReturnNotFound()
         {
-            var response = await Context.Client.GetAsync("/");
+            var response = await Context.Client.GetAsync("/groot");
 
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }

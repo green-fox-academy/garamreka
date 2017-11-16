@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace Groot.Models
 {
-    public class ErrorMessage : IGuardian
+    interface IGuardian
     {
-        public string Error { get; set; } = "I am Groot!";
     }
 }
