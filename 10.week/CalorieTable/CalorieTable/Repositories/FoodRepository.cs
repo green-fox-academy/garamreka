@@ -38,9 +38,24 @@ namespace CalorieTable.Repositories
             FoodContext.SaveChanges();
         }
 
+        public void UpdateAmount(Food food, long id)
+        {
+            var foodToUpdate = GetID(id);
+            foodToUpdate.Amount = food.Amount;
+
+            FoodContext.Foods.Update(foodToUpdate);
+            FoodContext.SaveChanges();
+        }
+
         public void Delete(long id)
         {
             FoodContext.Foods.Remove(GetID(id));
+            FoodContext.SaveChanges();
+        }
+
+        public void Remove(Food food)
+        {
+            FoodContext.Remove(food);
             FoodContext.SaveChanges();
         }
 
