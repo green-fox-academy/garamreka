@@ -38,8 +38,15 @@ namespace TheReddit.Controllers
         [Route("add")]
         public IActionResult AddPost(RedditPost post)
         {
-            RedditPostRepository.AddPost(post);
-            return RedirectToAction("Read");
+            if (ModelState.IsValid)
+            {
+                RedditPostRepository.AddPost(post);
+                return RedirectToAction("Read");
+            }
+            else
+            {
+                return View("Add");
+            }
         }
 
         [HttpGet]

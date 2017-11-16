@@ -8,10 +8,11 @@
 <body>
     <div class="jumbotron container">
         <h1>Add new Post</h1>
+        @*@Html.ValidationSummary()*@
             @using (Html.BeginForm("Add", "Home"))
             {
                 <p>Title
-                @Html.TextBoxFor(model => model.Title)</p>
+                @Html.TextBoxFor(model => model.Title) @Html.ValidationMessageFor(model => model.Title)</p>
                 <p>Content
                 @Html.TextBoxFor(model => model.Content)</p>
                 <input class="btn btn-default" type="submit" value="Submit">
