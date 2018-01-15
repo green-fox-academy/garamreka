@@ -1,4 +1,5 @@
-﻿using DbRelationMockPractice.Repositories;
+﻿using DbRelationMockPractice.Controllers;
+using DbRelationMockPractice.Repositories;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -11,7 +12,7 @@ namespace UnitTest
     class MockTest
     {
         [Test]
-        public void ChangeName()
+        public void ChangeNameRepoPhase()
         {
             var mockPracticeRepository = new Mock<IPracticeRepository>();
             var repo = new PracticeRepository(mockPracticeRepository.Object);
@@ -21,6 +22,14 @@ namespace UnitTest
                 .Returns("Gyula");
 
             Assert.AreEqual("Gyula", repo.ChangeName("Norbi", "Gyula"));
+        }
+
+        [Test]
+        public void ChangeNameControllerPhase()
+        {
+            var mockPracticeRepository = new Mock<IPracticeRepository>();
+            var controller = new HomeController(mockPracticeRepository.Object);
+            
         }
     }
 }

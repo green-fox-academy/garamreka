@@ -11,13 +11,11 @@ namespace DbRelationMockPractice.Controllers
 {
     public class HomeController : Controller
     {
-        PracticeRepository PracticeRepository;
-        IPracticeRepository IPracticeRepository;
+        IPracticeRepository PracticeRepository;
 
-        public HomeController(PracticeRepository practiceRepository, IPracticeRepository ipracticeRepository)
+        public HomeController(IPracticeRepository practiceRepository)
         {
             this.PracticeRepository = practiceRepository;
-            this.IPracticeRepository = ipracticeRepository;
         }
 
         [Route ("/api/info")]
@@ -25,5 +23,12 @@ namespace DbRelationMockPractice.Controllers
         {
             return Json(PracticeRepository.GetEverything());
         }
+
+        [Route("/api/change")]
+        public IActionResult Change(string oldName, string newName)
+        {
+            return Json(PracticeRepository.ChangeName(oldName, newName));
+        }
+
     }
 }

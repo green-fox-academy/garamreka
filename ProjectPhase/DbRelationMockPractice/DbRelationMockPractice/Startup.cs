@@ -23,7 +23,7 @@ namespace DbRelationMockPractice
             var connectionString = Environment.GetEnvironmentVariable("DbRelationMockPractice", EnvironmentVariableTarget.User);
             services.AddDbContext<PracticeContext>(options => options.UseNpgsql(connectionString));
 
-            services.AddScoped<PracticeRepository>();
+            services.AddScoped<IPracticeRepository, PracticeRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

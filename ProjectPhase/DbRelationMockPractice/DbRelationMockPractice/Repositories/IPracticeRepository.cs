@@ -9,5 +9,9 @@ namespace DbRelationMockPractice.Repositories
     public interface IPracticeRepository
     {
         string ChangeName(string oldName, string newName);
+        List<Address> GetEverything();
+        List<Student> GetStudents();
+        List<Address> GetAddresses();
+        List<Grade> GetGrades();
     }
 }
